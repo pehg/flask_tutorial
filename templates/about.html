@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-        <h1>About Page</h1>
-    </body>
-</html>
+<!-- Inherit from layout.html -->
+{% extends "layout.html" %}
+
+<!--
+    Code that will be replaced in layout.html. Note that it has to indicate
+    which block we want to modify
+-->
+{% block content %}
+    <h1>About Page</h1>
+{% endblock content %}

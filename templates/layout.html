@@ -1,11 +1,19 @@
-<!-- Implements template inheritance -->>
+<!-- Implements template inheritance -->
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        {% if title %}
+            <title>FlaskBlog - {{title}}</title>
+        {% else %}
+            <title>FlaskBlog</title>
+        {% endif %}
     </head>
     <body>
-        <!-- Templates will inherit everything but they will replace this section -->>
+        <!--
+            Templates will inherit everything but they will replace this section.
+            Also, noticed that "content" is the name of the block. This is used
+            as reference in the child templates.
+        -->
         {% block content %}{% endblock %}
     </body>
 </html>

@@ -1,9 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-        <h1>Home Page madafaca</h1>
-    </body>
-</html>
+<!-- Inherit from layout.html -->
+{% extends "layout.html" %}
+
+<!--
+    Code that will be replaced in layout.html. Note that it has to indicate
+    which block we want to modify
+-->
+{% block content%}
+    {% for d in data %}
+        <h1>{{ d.title }}</h1>
+        <p>By {{ d.author}} on {{ d.date_posted }} </p>
+        <p>{{ d.content }}</p>
+    {% endfor %}
+{% endblock content %}
